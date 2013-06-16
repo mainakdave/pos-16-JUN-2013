@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F6708BE-C6DF-4E30-9BC4-6EEF4CF32668}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleImageUpload_UserControl_WebApp_CS</RootNamespace>
+    <AssemblyName>SimpleImageUpload_UserControl_WebApp_CS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeCarvings.Piczard, Version=1.2.3.0, Culture=neutral, PublicKeyToken=88d00d4422733d60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\pos\bin\CodeCarvings.Piczard.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ajax\brand.aspx" />
+    <Content Include="ajax\comment.aspx" />
+    <Content Include="ajax\department.aspx" />
+    <Content Include="ajax\family.aspx" />
+    <Content Include="ajax\format.aspx" />
+    <Content Include="ajax\itemPics.aspx" />
+    <Content Include="ajax\itemRestaurant.aspx" />
+    <Content Include="ajax\itemWarning.aspx" />
+    <Content Include="ajax\line.aspx" />
+    <Content Include="ajax\modifierDetail.aspx" />
+    <Content Include="ajax\modifierMaster.aspx" />
+    <Content Include="ajax\Save.aspx" />
+    <Content Include="ajax\section.aspx" />
+    <Content Include="ajax\taxGroup.aspx" />
+    <Content Include="ajax\taxType.aspx" />
+    <Content Include="App_Data\PiczardTempFiles\.gitignore" />
+    <Content Include="App_Data\source\trevi1.jpg" />
+    <Content Include="country_state.xml" />
+    <Content Include="css\bootstrap\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\bootstrap\bootstrap.min.css" />
+    <Content Include="css\colorpicker\colorpicker.css" />
+    <Content Include="css\colorpicker\layout.css" />
+    <Content Include="css\images\blank.gif" />
+    <Content Include="css\images\colorpicker_background.png" />
+    <Content Include="css\images\colorpicker_hex.png" />
+    <Content Include="css\images\colorpicker_hsb_b.png" />
+    <Content Include="css\images\colorpicker_hsb_h.png" />
+    <Content Include="css\images\colorpicker_hsb_s.png" />
+    <Content Include="css\images\colorpicker_indic.gif" />
+    <Content Include="css\images\colorpicker_overlay.png" />
+    <Content Include="css\images\colorpicker_rgb_b.png" />
+    <Content Include="css\images\colorpicker_rgb_g.png" />
+    <Content Include="css\images\colorpicker_rgb_r.png" />
+    <Content Include="css\images\colorpicker_select.gif" />
+    <Content Include="css\images\colorpicker_submit.png" />
+    <Content Include="css\images\custom_background.png" />
+    <Content Include="css\images\custom_hex.png" />
+    <Content Include="css\images\custom_hsb_b.png" />
+    <Content Include="css\images\custom_hsb_h.png" />
+    <Content Include="css\images\custom_hsb_s.png" />
+    <Content Include="css\images\custom_indic.gif" />
+    <Content Include="css\images\custom_rgb_b.png" />
+    <Content Include="css\images\custom_rgb_g.png" />
+    <Content Include="css\images\custom_rgb_r.png" />
+    <Content Include="css\images\custom_submit.png" />
+    <Content Include="css\images\select.png" />
+    <Content Include="css\images\select2.png" />
+    <Content Include="css\images\slider.png" />
+    <Content Include="css\style.css" />
+    <Content Include="css\virtualKB\keyboard.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="img\bootstrap\glyphicons-halflings-white.png" />
+    <Content Include="img\bootstrap\glyphicons-halflings.png" />
+    <Content Include="img\browseImage.png" />
+    <Content Include="img\browseImage.svg" />
+    <Content Include="img\cream_pixels.png" />
+    <Content Include="img\Department.png" />
+    <Content Include="img\find.png" />
+    <Content Include="img\handmadepaper.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\deleteHover.png" />
+    <Content Include="img\p6.png" />
+    <Content Include="img\pin.png" />
+    <Content Include="img\ricepaper2.png" />
+    <Content Include="img\selectedArrow.png" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\blank.gif" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\SimpleImageUpload.ascx" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\simpleImageUpload.js" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\upload.aspx" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\wait.gif" />
+    <Content Include="scripts\alert\jquery.alerts.js" />
+    <Content Include="scripts\alert\jquery.bsAlerts.js" />
+    <Content Include="scripts\bootstrap\bootstrap.js" />
+    <Content Include="scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="scripts\colorpicker\colorpicker.js" />
+    <Content Include="scripts\colorpicker\eye.js" />
+    <Content Include="scripts\colorpicker\layout.js" />
+    <Content Include="scripts\colorpicker\utils.js" />
+    <Content Include="scripts\imageRotateCompress\jQueryRotateCompressed.2.2.js" />
+    <Content Include="scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="scripts\jquery-1.4.1.js" />
+    <Content Include="scripts\jquery-1.4.1.min.js" />
+    <Content Include="scripts\virtualKB\jquery.keyboard.extension-typing.js" />
+    <Content Include="scripts\virtualKB\jquery.keyboard.js" />
+    <Content Include="test\gfx\digivogueTab1.png" />
+    <Content Include="views\brand.aspx" />
+    <Content Include="views\comment.aspx" />
+    <Content Include="views\department.aspx" />
+    <Content Include="views\family.aspx" />
+    <Content Include="views\format.aspx" />
+    <Content Include="views\item.aspx" />
+    <Content Include="views\itemPics.aspx" />
+    <Content Include="views\itemResturant.aspx" />
+    <Content Include="views\itemWarning.aspx" />
+    <Content Include="views\line.aspx" />
+    <Content Include="views\modifierDetail.aspx" />
+    <Content Include="views\modifierMaster.aspx" />
+    <Content Include="views\section.aspx" />
+    <Content Include="views\taxGroup.aspx" />
+    <Content Include="views\taxType.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajax\brand.aspx.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\brand.aspx.designer.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\comment.aspx.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\comment.aspx.designer.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\department.aspx.cs">
+      <DependentUpon>department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\department.aspx.designer.cs">
+      <DependentUpon>department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\family.aspx.cs">
+      <DependentUpon>family.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\family.aspx.designer.cs">
+      <DependentUpon>family.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\format.aspx.cs">
+      <DependentUpon>format.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\format.aspx.designer.cs">
+      <DependentUpon>format.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\itemPics.aspx.cs">
+      <DependentUpon>itemPics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\itemPics.aspx.designer.cs">
+      <DependentUpon>itemPics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\itemRestaurant.aspx.cs">
+      <DependentUpon>itemRestaurant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\itemRestaurant.aspx.designer.cs">
+      <DependentUpon>itemRestaurant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\itemWarning.aspx.cs">
+      <DependentUpon>itemWarning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\itemWarning.aspx.designer.cs">
+      <DependentUpon>itemWarning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\line.aspx.cs">
+      <DependentUpon>line.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\line.aspx.designer.cs">
+      <DependentUpon>line.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\modifierDetail.aspx.cs">
+      <DependentUpon>modifierDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\modifierDetail.aspx.designer.cs">
+      <DependentUpon>modifierDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\modifierMaster.aspx.cs">
+      <DependentUpon>modifierMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\modifierMaster.aspx.designer.cs">
+      <DependentUpon>modifierMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\Save.aspx.cs">
+      <DependentUpon>Save.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\Save.aspx.designer.cs">
+      <DependentUpon>Save.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\section.aspx.cs">
+      <DependentUpon>section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\section.aspx.designer.cs">
+      <DependentUpon>section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\taxGroup.aspx.cs">
+      <DependentUpon>taxGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\taxGroup.aspx.designer.cs">
+      <DependentUpon>taxGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\taxType.aspx.cs">
+      <DependentUpon>taxType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\taxType.aspx.designer.cs">
+      <DependentUpon>taxType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="piczardUserControls\simpleImageUploadUserControl\SimpleImageUpload.ascx.cs">
+      <DependentUpon>SimpleImageUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="piczardUserControls\simpleImageUploadUserControl\SimpleImageUpload.ascx.designer.cs">
+      <DependentUpon>SimpleImageUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="piczardUserControls\simpleImageUploadUserControl\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="piczardUserControls\simpleImageUploadUserControl\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test\masters\DefaultMasterPage.master.cs">
+      <DependentUpon>DefaultMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test\masters\DefaultMasterPage.master.designer.cs">
+      <DependentUpon>DefaultMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="views\brand.aspx.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\brand.aspx.designer.cs">
+      <DependentUpon>brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\comment.aspx.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\comment.aspx.designer.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\department.aspx.cs">
+      <DependentUpon>department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\department.aspx.designer.cs">
+      <DependentUpon>department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\family.aspx.cs">
+      <DependentUpon>family.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\family.aspx.designer.cs">
+      <DependentUpon>family.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\format.aspx.cs">
+      <DependentUpon>format.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\format.aspx.designer.cs">
+      <DependentUpon>format.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\item.aspx.cs">
+      <DependentUpon>item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\item.aspx.designer.cs">
+      <DependentUpon>item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\itemPics.aspx.cs">
+      <DependentUpon>itemPics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\itemPics.aspx.designer.cs">
+      <DependentUpon>itemPics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\itemResturant.aspx.cs">
+      <DependentUpon>itemResturant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\itemResturant.aspx.designer.cs">
+      <DependentUpon>itemResturant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\itemWarning.aspx.cs">
+      <DependentUpon>itemWarning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\itemWarning.aspx.designer.cs">
+      <DependentUpon>itemWarning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\line.aspx.cs">
+      <DependentUpon>line.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\line.aspx.designer.cs">
+      <DependentUpon>line.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\masterPage.Master.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\masterPage.Master.designer.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="views\modifierDetail.aspx.cs">
+      <DependentUpon>modifierDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\modifierDetail.aspx.designer.cs">
+      <DependentUpon>modifierDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\modifierMaster.aspx.cs">
+      <DependentUpon>modifierMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\modifierMaster.aspx.designer.cs">
+      <DependentUpon>modifierMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\section.aspx.cs">
+      <DependentUpon>section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\section.aspx.designer.cs">
+      <DependentUpon>section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\taxGroup.aspx.cs">
+      <DependentUpon>taxGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\taxGroup.aspx.designer.cs">
+      <DependentUpon>taxGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\taxType.aspx.cs">
+      <DependentUpon>taxType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\taxType.aspx.designer.cs">
+      <DependentUpon>taxType.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\css\default.css" />
+    <Content Include="test\default.aspx" />
+    <Content Include="test\gfx\ajax-loader.gif" />
+    <Content Include="test\gfx\codeCarvingsHeaderLogo.gif" />
+    <Content Include="test\gfx\headerBG.gif" />
+    <Content Include="test\gfx\headerRight.gif" />
+    <Content Include="test\gfx\pageBGTop.jpg" />
+    <Content Include="test\gfx\pageBorder.gif" />
+    <Content Include="test\gfx\piczardPageLogo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="test\masters\DefaultMasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\preview.ashx" />
+    <Content Include="piczardUserControls\simpleImageUploadUserControl\uploadMonitor.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\colorpicker\" />
+    <Folder Include="uploadedImg\comment\" />
+    <Folder Include="uploadedImg\department\" />
+    <Folder Include="uploadedImg\family\" />
+    <Folder Include="uploadedImg\format\" />
+    <Folder Include="uploadedImg\itemPics\" />
+    <Folder Include="uploadedImg\section\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\masterPage.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

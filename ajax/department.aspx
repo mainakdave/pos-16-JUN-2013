@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="department.aspx.cs" Inherits="POS.ajax.department" %>

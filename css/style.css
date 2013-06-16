@@ -1,0 +1,146 @@
+﻿html
+{
+    height: 100%;
+    /* background: url("../img/p6.png") !important; */ /* ricepaper2 */
+}
+body
+{
+    /* background: url("../img/p6.png") !important; */
+    font-family: 'Open Sans', sans-serif !important;
+}
+label, input, select
+{
+    /* float: left; */
+    box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+    -khtml-box-shadow:none !important;
+    
+    font-size:12px !important; 
+}
+input
+{
+    font-family: 'Open Sans', sans-serif !important;
+}
+input[type="text"]:focus
+{
+    /*
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    */
+    
+    /*
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    */
+}
+
+
+
+#dataRows th{background: #3DAAE0;color: #fff;}
+#dataRows tr:hover{background: #EBF2F7; cursor:pointer;}
+#dataRows { /* width: auto; */ }
+#dataRows .btn-danger
+{
+    background: url("../img/delete.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    border: none;
+    
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    
+    text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
+    -khtml-text-shadow: none;
+    
+    height: 18px;
+    width: 15px;
+}
+#dataRows .btn-danger:hover
+{
+    background: url("../img/deleteHover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#menu .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus 
+{
+    background: #FF6339;
+    background-image: url("../img/selectedArrow.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
+}
+#menu .nav-pills a, .nav-pills a:hover, .nav-pills a:focus
+{
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -khtml-border-radius: 0px !important;
+}
+
+#searchArea
+{
+    background: url("../img/find.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding-left: 50px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.searchText{margin-left: 5px; margin-right: 5px;}
+
+#ctl00_MainContent_ImageUploader_btnBrowse{ /* background: url("../img/browseImage.png"); */ }
+
+#colorSelector, #colorSelector_text{ display: inline-table; }
+.colorSelectorTxt 
+{
+    width: 180px !important;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+.icons{ margin-right: 7px; }
+.iconText{ }
+#pin 
+{
+    margin-top: 3px;
+    margin-right: 3px;
+    opacity: 0.4;
+    float: right;
+}
+
+#alertBox
+{
+    position:absolute;
+    width:auto;
+    height:auto;
+    font-size:20px;
+}
+
+#submit, #btnCancel {margin-top:15px;}
+
+#department table, #section table, #family table, #brand table, #line table, #comment table, #format table, #itemWarning table, #item table, #itemRestaurant table, #itemPics table, #modifierMaster table, #modifierDetail table, #taxType table, #taxGroup table {margin-right: 0}
+#department td, #section td, #family td, #brand td, #line td, #comment td, #format td, #itemWarning td, #item td, #itemRestaurant td, #itemPics td, #modifierMaster td, #modifierDetail td, #taxType td, #taxGroup td {padding: 0px 10px;}
+
+#department table input:not([type='checkbox']), #section table input:not([type='checkbox']), #family table input:not([type='checkbox']), 
+#brand table input:not([type='checkbox']), #line table input:not([type='checkbox']), #comment table input:not([type='checkbox']), 
+#format table input:not([type='checkbox']), #itemWarning table input:not([type='checkbox']), #item table input:not([type='checkbox']), 
+#itemRestaurant table input:not([type='checkbox']), #itemPics table input:not([type='checkbox']), #modifierMaster table input:not([type='checkbox']), 
+#modifierDetail table input:not([type='checkbox']), #taxType table input:not([type='checkbox']), #taxGroup table input:not([type='checkbox']) {width: 100%;}
+
+#department table select, #section table select, #family table select, #brand table select, #line table select, #comment table select, #format table select, #itemWarning table select, #item table select, #itemRestaurant table select, #itemPics table select, #modifierMaster table select, #modifierDetail table select, #taxType table select, #taxGroup table select {width: 100%;}
+
+#ctl00_MainContent_ImageUploader_imgPreview{max-width:200px; max-height:100px;}
+#ctl00_MainContent_ImageUploader_container0{max-width:200px;}
+
+
+#clearSearch{display:inline; font-size:9pt; font-style:italic; }

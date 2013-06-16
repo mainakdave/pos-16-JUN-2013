@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="POS.views.masterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <asp:ContentPlaceHolder ID="MainHeadContent" runat="server">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+
+        <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" >
+        <link href="../css/virtualKB/keyboard.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../css/colorpicker/colorpicker.css" type="text/css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/colorpicker/layout.css" />
+
+        <link href="../css/style.css" rel="stylesheet" />
+
+        
+
+        <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script src="../Scripts/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="../Scripts/virtualKB/jquery.keyboard.js" type="text/javascript"></script>
+        <script src="../Scripts/virtualKB/jquery.keyboard.extension-typing.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="../Scripts/colorpicker/colorpicker.js"></script>
+        <script type="text/javascript" src="../Scripts/colorpicker/eye.js"></script>
+        <script type="text/javascript" src="../Scripts/colorpicker/utils.js"></script>
+        <script type="text/javascript" src="../Scripts/colorpicker/layout.js?ver=1.0.2"></script>
+
+        <script type="text/javascript" src="../Scripts/alert/jquery.bsalerts.js" ></script>
+
+        <script type="text/javascript" src="../scripts/imageRotateCompress/jQueryRotateCompressed.2.2.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                $('input:text').keyboard({
+                initialFocus: true,
+                stayOpen: false,
+                autoAccept: true,
+                tabNavigation: true,
+                stickyShift: false,
+                usePreview: false,
+                position: {
+                of: "body",
+                my: "center center",
+                at: "center center",
+                at2: 'center center'
+                }
+                })
+                .addTyping();
+                */
+
+
+
+
+                $("#tab1Ref").click(function () {
+                    clearAllElements();
+
+                    $('#tab2Ref a').html('Create New');
+                });
+
+                var hidePin = 1;
+                $("#pin").click(function () {
+                    //alert(hidePin);
+
+                    if (hidePin == 1) {
+                        $(this).rotate(90);
+
+                        $(".iconText").animate({ width: "0" }, 1500, "swing", function () {
+                            $(".iconText").css("display", "none");
+                        });
+
+                        hidePin = 0;
+                    }
+                    else {
+                        $(this).rotate(0);
+
+                        $(".iconText").css("display", "inline");
+
+                        $(".iconText").animate({ width: "80px" }, 1500, "swing", function () {
+
+                        });
+
+                        hidePin = 1;
+                    }
+                });
+
+                $(document).resize();
+            });
+
+            $(window).resize(function () {
+                $("#menu").css("height", $(window).outerHeight());
+            });
+        </script>
+
+    </asp:ContentPlaceHolder>
+
+     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+     </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    
+        <div class="row-fluid">
+            <div class="span2" style="border-right: 1px solid #eee; width:auto">
+                <div style="float:right; cursor:pointer; padding: 0 5px; width:100%; "><img id="pin" src="../img/pin.png" /></div>
+
+                <div id="menu" style="float:left; width:100%; ">
+                <!-- <div class="navbar">
+                    <div class="navbar-inner"> -->
+                        <ul class="nav nav-pills nav-stacked">
+                <li id="department">
+                    <a href="department.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Department</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li id="section">
+                    <a href="section.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Section</span>
+                    </a>
+                 </li>
+                <li class="divider-vertical"></li>
+                <li id="family">
+                    <a href="family.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Family</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li id="brand">
+                    <a href="brand.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Brand</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li id="line">
+                    <a href="line.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Line</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li id="comment">
+                    <a href="comment.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Comment</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li id="format">
+                    <a href="format.aspx">
+                        <img class="icons" src="../img/Department.png" />
+                        <span class="iconText">Format</span>
+                    </a>
+                </li>
+                <li class="divider-vertical"></li>
+                
+                <!--
+                <li id="itemWarning"><a href="itemWarning.aspx">Item Warning</a></li>
+                <li class="divider-vertical"></li>
+                <li id="item"><a href="item.aspx">Item</a></li>
+                <li class="divider-vertical"></li>
+                <li id="itemPics"><a href="itemPics.aspx">Item Pics</a></li>
+                <li class="divider-vertical"></li>
+                <li id="itemRestaurant"><a href="itemPics.aspx">Item Restaurant</a></li>
+                -->
+
+                <li id="itemPages" style="display:none">
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        Item Warning
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li id="itemWarning"><a href="itemWarning.aspx">Item Warning</a></li>
+                        <li id="item"><a href="item.aspx">Item</a></li>
+                        <li id="itemPics"><a href="itemPics.aspx">Item Pics</a></li>
+                        <li id="itemResturant"><a href="itemResturant.aspx">Item Restaurant</a></li>
+                      </ul>
+                    </div>
+                </li>
+
+                <li class="divider-vertical"></li>
+
+                <li id="modifierPages" style="display:none">
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        Modifier
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li id="Li1"><a href="modifierMaster.aspx">Modifier Master</a></li>
+                        <li id="Li2"><a href="modifierDetail.aspx">Modifier Detail</a></li>
+                      </ul>
+                    </div>
+                </li>
+
+                <li class="divider-vertical"></li>
+
+                <li id="taxPages" style="display:none">
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                        Tax
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li id="Li3"><a href="taxType.aspx">Tax Type</a></li>
+                        <li id="Li4"><a href="taxGroup.aspx">Tax Group</a></li>
+                      </ul>
+                    </div>
+                </li>
+            </ul>
+                    <!-- </div>
+                </div> -->
+                </div>
+            </div>
+    
+            <div class="span10" style="margin-top:10px">
+                <form id="form1" runat="server">
+    <div class="main">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </div>
+    </form>
+            </div>
+        </div>
+    
+</body>
+</html>
